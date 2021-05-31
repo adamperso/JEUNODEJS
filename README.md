@@ -3,6 +3,10 @@
 
 - Bonjour ceci est le jeu pierre ciseau et le joueur qui jouera la pierre gagnera.
   Il stoppera le jeu.
+  
+- Modules utilisés : ExpressJS, Socket.io, http.
+
+- Port utilisé : 3000.
 
 - Merci de vider caches et cookies pour le bon déroulement du jeu.
 
