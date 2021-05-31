@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="../../../../favicon.ico" />
+    <title>SHIFUMI</title>
+  </head>
+
+  <body style="background-color: black; height: 100%; width: 100%; overflow: hidden;">
+    <div class="row physique" id="formopen" style="height: 100%;width: 100%; background-color: black;position: absolute;">   
+      <div class="" style="width:600px; height: 600px; position: relative; top: 40%; left: 35%;" >
+        <h1 class="text-white" style="padding-bottom: 40px;">Chosissez votre joueur</h1>
+        <form action="">
+          <ul style="display: -webkit-box;">
+            <div class="col-6">
+              <li>
+                <label for="numjoueur" class="text-danger">joueur1</label>
+                <input type="radio" name="numjoueur" value="joueur1" id="joueur1" style="vertical-align:auto" />
+              </li>
+
+            </div>
+            <div class="col-6">
+                    <li>
+                      <label for="numjoueur" class="text-danger">joueur2</label>
+                      <input type="radio" name="numjoueur" value="joueur2" id="joueur2" style="vertical-align:auto" />
+                    </li>
+                  </div>
+          </ul>
+</form>
+        </div>
+</div>
+    <div class="container" style="display: none; " id="divprincipale">
+      <div class="row" style="margin-top: 100px">
+        <div class="col-4" style="width: 10%; height: 50px"></div>
+        <div class="col-4" style="height: 10%; width: 50px">
+          <h1 class="text-danger">SHIFUMI</h1>
+        </div>
+        <div
+          class="col-4"
+          style="
+            position: absolute;
+            height: 30%;
+            width: 50px;
+            top: 45%;
+            left: 45%;
+          "
+        ></div>
+        </div>
+        <div class="row">
+          <div
+            class="jumbotron border border-danger bg-white selection1"
+            id="selection1"
+            style="width: 20%; height: 20%; margin-left: auto; margin-right: auto"
+          >
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.kbGYIPNFU43s6hRhiiWsTQAAAA&pid=Api&P=0&w=300&h=300"
+              alt="PDI"
+              style="width: 100%; height: 100%; position: relative"
+            />
+          </div>
+          <div
+            class="jumbotron border border-danger bg-white"
+            id="selection2"
+            style="width: 20%; height: 20%; margin-left: auto; margin-right: auto"
+          >
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.iNF_94NIUXi8vIH1nH7PZgHaFP&pid=Api&P=0&w=239&h=170"
+              alt="PDI"
+              style="width: 100%; height: 100%; position: relative"
+            />
+          </div>
+          <div
+            class="jumbotron border border-danger bg-white"
+            id="selection3"
+            style="width: 20%; height: 20%; margin-left: auto; margin-right: auto"
+          >
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.k7V5jR-0sUw_L5iKc19RfwAAAA&pid=Api&P=0&w=300&h=300"
+              alt="PDI"
+              style="width: 100%; height: 100%; position: relative"
+            />
+          </div>
+        </div>
+
+        <div
+          class="row marketing bg-dark"
+          id="marketing"
+          style="display:inline"
+        >
+              <form action="">
+                    <ul style="display: -webkit-box;">
+                            <div class="col-5">
+                              <li>
+                                <label for="pierre" class="text-danger">pierre </label>
+                                <input type="radio" name="vote" value="pierre" id="pierre" style="vertical-align:auto" />
+                              </li>
+                            </div>
+
+                            <div class="col-5">
+                              <li>
+                                <label for="feuille" class="text-danger">feuille</label>
+                                <input
+                                  type="radio"
+                                  name="vote"
+                                  value="feuille"
+                                  id="feuille"
+                                  style="vertical-align:auto"
+                                />
+                              </li>
+                            </div>
+
+                            <div class="col-2">
+                              <li>
+                                <label for="ciseau" class="text-danger">ciseau </label>
+                                <input type="radio" name="vote" value="ciseau" id="ciseau" />
+                              </li>
+                            </div>
+                    </ul>
+          </form>
+        </div>
+                        <div class="row">
+                          <div id="votes">
+                          </div>
+                        </div>
+          <div
+            class="col-1"
+            style="height: auto; width: auto; background-color: black"
+          ></div>
+      </div>
+      <div class="row">
+        <a href="#" class="btn btn-lg btn-danger"
+          ><span class="glyphicon glyphicon-play"></span> Jouer</a
+        >
+      </div>
+      <footer class="footer text-white" style="background-color: black">
+        <p>MADE BY ADAM</p>
+      </footer>
+    </div>
+
+    <!--    <script type="text/javascript">
+      
+          function disparition() {
+             var e = document.getElementById(id);
+             if(e.style.display == 'block')
+                e.style.display = 'none';
+             else
+                e.style.display = 'block';
+          }
+      
+      </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" language="JavaScript">
+      function ecrire_cookie(nom, valeur, expires) {
+        document.cookie =
+          nom +
+          "=" +
+          escape(valeur) +
+          (expires == null ? "" : "; expires=" + expires.toGMTString());
+      }
+
+      function arguments_cookie(offset) {
+        var endstr = document.cookie.indexOf(";", offset);
+        if (endstr == -1) endstr = document.cookie.length;
+        return unescape(document.cookie.substring(offset, endstr));
+      }
+
+      function lire_cookie(nom) {
+        var arg = nom + "=";
+        var alen = arg.length;
+        var clen = document.cookie.length;
+        var i = 0;
+        while (i < clen) {
+          var j = i + alen;
+          if (document.cookie.substring(i, j) == arg)
+            return arguments_cookies(j);
+          i = document.cookie.indexOf(" ", i) + 1;
+          if (i == 0) break;
+        }
+        return null;
+      }
+    </script>
+    <script>
+      var premiereImg = document.getElementById("selection1");
+      var deuxiemeImg = document.getElementById("selection2");
+      var troisiemeImg = document.getElementById("selection3");
+
+      premiereImg.addEventListener("click", function () {
+        deuxiemeImg.style.display = "none";
+        troisiemeImg.style.display = "none";
+      });
+      deuxiemeImg.addEventListener("click", function () {
+        premiereImg.style.display = "none";
+        troisiemeImg.style.display = "none";
+      });
+      troisiemeImg.addEventListener("click", function () {
+        premiereImg.style.display = "none";
+        deuxiemeImg.style.display = "none";
+      });
+    </script>
+    <script>
+      $(function () {
+        var socket = io();
+
+        $("#jumbotron").click("bouton", function () {
+          $("#marketing").show();
+        });
+
+        $("input[type=radio][name=vote]").on("change", function () {
+          console.log(this.value);
+          var poi ;
+          if(/2/.test(document.cookie)){
+            poi = 2;
+          }else if(/1/.test(document.cookie)){
+            poi = 1;
+          }
+          socket.emit("numerojoueur",poi);
+          socket.emit("vote", this.value);
+        });
+
+        $("input[type=radio][name=numjoueur]").on("change", function () {
+          console.log(this.value);
+          socket.emit("login", this.value);
+        });
+
+        socket.on("idincconnex", function (data2) {
+          //$("#votes").html("");
+          var x = document.getElementById("divprincipale");
+          var y = document.getElementById("formopen");
+          console.log(y);
+          x.style.display = "inline";
+          y.style.display= "none";
+          if (/1/.test(document.cookie)){
+            $("#votes").append(
+            `  
+                <p class="text-danger">
+                    <strong class="text-danger">Joueur 2 est connecté  </strong>
+                </p>
+            `
+          );
+          }else{
+           $("#votes").append(
+            `  
+                <p class="text-danger">
+                    <strong class="text-danger">Joueur 1 est connecté  </strong>
+                </p>
+            `
+          ); 
+          }
+        });
+        socket.on("cookie", function (utilisateur) {
+           //Ecriture date + cookie
+      var cookieexist = document.cookie;
+      if(/3|4|5|6|7|8|9/.test(cookieexist)) {
+        console.log("impossible de jouer");
+        $("#formopen").html("");
+          var x = document.getElementById("divprincipale");
+          var y = document.getElementById("formopen");
+          // console.log(y);
+          x.style.display = "none";
+          y.style.display= "inline";
+          $("#formopen").append(
+            `  
+                <p class="text-danger">
+                    <strong class="text-white" style="position:absolute;top:50%;left:30%">Jeu limité à 2 joueurs. Merci d'effacer vos cookies et de bien vouloir relancer le jeu !</strong>
+                </p>
+            `
+          );
+      }
+      
+      date = new Date();
+      date.setMonth(date.getMonth() + 1);
+      noumcook = "joueur" + utilisateur;
+      ecrire_cookie("deja_venu", "oui", date);
+      ecrire_cookie("nomdujoueur",noumcook, date); 
+        });
+    
+        socket.on("updateVote", function (data) {
+          //$("#votes").html("");
+          //var J1 = /1/.test(document.cookie);
+          //var J2 = /2/.test(document.cookie);
+          if(/1/.test(document.cookie)){
+           $("#votes").append(
+            `  
+                <p class="text-danger">
+                    <strong class="text-danger"> Joueur1 a joué : ${data} </strong>
+                </p>
+            `
+          ); 
+          }
+          if(/2/.test(document.cookie)){
+            $("#votes").append(
+            `  
+                <p class="text-danger">
+                    <strong class="text-danger"> Joueur2 a joué : ${data} </strong>
+                </p>
+            `
+          ); 
+          }
+          
+        });
+        
+        socket.on("findujeu", function (data) {
+          $("#formopen").html("");
+          var x = document.getElementById("divprincipale");
+          var y = document.getElementById("formopen");
+          console.log(y);
+          x.style.display = "none";
+          y.style.display= "inline";
+          $("#formopen").append(
+            `  
+                <H1 class="text-danger" class="text-white" style="position:absolute;top:50%;left:50%">Joueur a gagné : il a joué la pierre
+                </H1>
+            `
+          );
+        });
+      });
+      //});
+    </script>
+  </body>
+</html>
