@@ -15,5 +15,4 @@
 
 - Seulement 2 joueurs peuvent jouer simultanément.
 
-- les promesses ne sont pas utilisées dans cet exercice mais seront utilisés dans le TP final (TR Réseau social).
 
